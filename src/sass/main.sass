@@ -10,7 +10,7 @@ html
   box-sizing: inherit
 
 body
-  font-family: "Open Sans"
+  font-family: "PragmataPro for Powerline"
   background: #222
 
 .date
@@ -49,8 +49,10 @@ body
   width: 100vw
 
 .login-window
-  background: $right-background-plate
-  opacity: 0
+  // background: $right-background-plate
+  background: rgba(2,2,8,0.8)
+  // background: #000
+  // opacity: 0.8
 
   // Vertical Center
   position: absolute
@@ -80,7 +82,8 @@ body
   .left-col
     color: #fff
 
-    background: $left-background
+    background: rgba(2,2,8,0.6)
+    // background: $left-background
     width: $command-panel-width
 
     border-top-left-radius: 4px
@@ -88,7 +91,7 @@ body
 
 
   .right-col
-    background: $right-background-image
+    background: rgba(2,2,8,0.2)
 
     width: $login-panel-width
 
@@ -130,7 +133,7 @@ body
         animation-timing-function: ease-out
 
       .button-accept, .button-reject
-        background: rgba(0, 0, 0, 0.2)
+        background: rgba(0, 0, 0, 0.3)
         position: relative
         opacity: 0.4
 
@@ -263,7 +266,8 @@ body
 
 .right-col
   color: #fff
-  border: 1px solid rgba(251, 98, 192, 0.25)
+  border: 1px solid rgba(0, 0, 0, 0)
+  // border: 1px solid #000
   border-bottom: none
 
   & > div
@@ -284,7 +288,7 @@ body
 
     .avatar-container
       height: 50%
-      padding-top: 20px
+      padding-top: 10px
       padding-bottom: 75px
 
       .avatar-background
@@ -337,7 +341,7 @@ body
         background: none
         outline: none
         border: none
-        border-bottom: 2px solid rgba(255, 255, 255, 0.6)
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2)
 
         font-size: 14pt
         font-weight: bold
@@ -348,17 +352,17 @@ body
         transition: opacity 1s
 
         &:focus, &:active
-          border-bottom: 2px solid rgba(255, 255, 255, 0.8)
+          border-bottom: 2px solid rgba(255, 255, 255, 0.2)
 
         &::-webkit-input-placeholder
-          color: rgba(255, 255, 255, 0.4)
+          color: rgba(255, 255, 255, 0.2)
           @extend .noselect
 
         &.error
           animation: error-shake 600ms forwards
 
         &.error, &.error:focus, &.error:active
-          border-bottom: 2px solid rgba(175, 3, 3, 0.6)
+          border-bottom: 2px solid rgba(175, 3, 3, 0.2)
 
         &.error::-webkit-input-placeholder
           color: #af0303
@@ -394,7 +398,7 @@ body
 
         .right .submit-button
           color: #fff
-          background: hsla(342,93%,76%,0.6)
+          background: #004456
           
           border: none
           border-radius: 4px
@@ -411,20 +415,22 @@ body
 
           &:hover
             cursor: pointer
-            background: rgba(255, 255, 255, 0.5)
+            background: rgba(255, 255, 255, 0.2)
 
       .submit-row-container
         position: relative
 
       .left .dropdown .dropdown-item
-        color: #525252
+        color: #004456
         display: none
-        background: rgba(255, 255, 255, 0.9)
+        // background: rgba(255, 255, 255, 0.9)
+        background: rgba(0, 0, 0, 0.3)
+        // background: #004456
 
         padding: 8px 10px
 
         &:hover
-          background: rgba(255, 255, 255, 1)
+          background: rgba(22, 22, 22, 0.5)
 
       .left .dropdown .dropdown-item.active
         color: #fff
@@ -432,7 +438,7 @@ body
         
         // Lighter f73f89
         // Darker f83f77
-        background: #f83f77 $dropdown-caret no-repeat 90% 50%
+        background: #004456 $dropdown-caret no-repeat 90% 50%
         position: relative
 
         font-style: italic

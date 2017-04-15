@@ -21,6 +21,7 @@ export default class PasswordField extends Component {
         className={ classes.join(' ') } 
         value={ this.props.password }
         onChange={ this.props.handlePasswordInput }
+        autofocus
       />
     );
   }
