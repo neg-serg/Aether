@@ -4,9 +4,7 @@ Inspired by a lifelong love with space.
 
 A Sleek, straightforward Archlinux themed login screen written on lightdm and the lightdm-webkit2-greeter.
 
-![](../screenshots/screenshot.png)
-
-![](../screenshots/screenshot-2.png)
+![](http://i.imgur.com/rxb1DSi.png)
 
 ## Table of Contents
 
@@ -40,22 +38,6 @@ A Sleek, straightforward Archlinux themed login screen written on lightdm and th
 pacaur -S lightdm-webkit-theme-aether
 ```
 
-**Manual Installation**
-
-This assumes that you already have lightdm and lightdm-webkit2-greeter installed (but not configured).
-
-```
-# If you prefer the last stable release, download from the releases page instead: https://github.com/NoiSek/Aether/releases/latest
-git clone git@github.com:NoiSek/Aether.git
-sudo cp --recursive Aether /usr/share/lightdm-webkit/themes/Aether
-
-# Set default lightdm-webkit2-greeter theme to Aether
-sudo sed -i 's/^webkit-theme\s*=\s*\(.*\)/webkit-theme = lightdm-webkit-aether #\1/g' etc/lightdm/lightdm-webkit2-greeter.conf
-
-# Set default lightdm greeter to lightdm-webkit2-greeter
-sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' etc/lightdm/lightdm.conf
-```
-
 ### **Setting an Avatar Image**
 
 Once LightDM, LightDM Webkit Greeter, and Aether are installed you will need to set an avatar image for your users. Size is irrelevant, and avatars will be displayed as a 125x125 circle (Yes, square images too). Users that don't have an avatar set will default to the [astronaut](./src/img/default-user.png).
@@ -74,22 +56,6 @@ Edit the `background_images` value under `branding` within your lightdm-webkit c
 *Note: This ignores the default value of /usr/share/backgrounds, as this is always set and would prevent the default wallpapers from working. To use wallpapers from within that directory, create a subdirectory at /usr/share/backgrounds/aether (or any other folder name) and change your config value accordingly.*
 
 ## Troubleshooting
-
-### My login screen hasn't changed!
-
-Make sure you have lightdm enabled via systemctl with `systemctl is-enabled lightdm.service`. If it isn't, follow up with:
-```
-sudo systemctl enable lightdm.service
-```
-
-### My screen is black!
-
-Verify that your libgl / glx drivers are properly installed. Find any potential issues with your X config by switching to another TTY with <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F2</kbd> and trying:
-```
-sudo cat /var/log/Xorg.0.log | grep -i "glx"
-```
-
-Are you able to run `glxinfo` without errors?
 
 ### The lock screen isn't using my lightdm theme!
 
