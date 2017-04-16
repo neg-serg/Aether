@@ -4,8 +4,6 @@ Inspired by a lifelong love with space.
 
 A Sleek, straightforward Archlinux themed login screen written on lightdm and the lightdm-webkit2-greeter.
 
-**Try it out [here, at the live demo](https://noisek.github.io/Aether/).**
-
 ![](../screenshots/screenshot.png)
 
 ![](../screenshots/screenshot-2.png)
@@ -28,16 +26,6 @@ A Sleek, straightforward Archlinux themed login screen written on lightdm and th
     - [Monitoring Changes](#monitoring-changes)
     - [Todo](#todo)
     - [Credit](#credits)
-
-## Features
-
-**Multi User Support**
-
-![](../screenshots/user-switcher.gif)
-
-**Built-in Wallpaper Customization**
-
-![](../screenshots/wallpaper-switcher.gif)
 
 ## Requirements
 - [lightdm-webkit2-greeter (aur/lightdm-webkit2-greeter )](https://github.com/Antergos/lightdm-webkit2-greeter)
@@ -69,8 +57,6 @@ sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-web
 ```
 
 ### **Setting an Avatar Image**
-
-![](./src/img/default-user.png)
 
 Once LightDM, LightDM Webkit Greeter, and Aether are installed you will need to set an avatar image for your users. Size is irrelevant, and avatars will be displayed as a 125x125 circle (Yes, square images too). Users that don't have an avatar set will default to the [astronaut](./src/img/default-user.png).
 
@@ -140,13 +126,6 @@ npm run build
 # Automatically detects and re-compiles changes.
 npm run watch
 ```
-
-##### Todo
-- [x] Separate dates from their parent components
-- [x] Implement wallpaper customization
-- [ ] Add switchable CSS themes
-- [ ] Rewrite using Redux for testing reasons.
-
 
 ##### Credit
 - *Bear by Yu luck from the Noun Project*
